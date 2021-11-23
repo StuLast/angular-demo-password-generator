@@ -5,7 +5,11 @@
 
       <div class="field">
         <label>Length</label>
-        <input class="input" type="number" (input)="onChangePasswordLength($event.target)" />
+        <input
+          class="input"
+          type="number"
+          (input)="onChangePasswordLength($event.target)"
+        />
       </div>
 
       <div class="field">
@@ -35,9 +39,11 @@
         </div>
       </div>
 
-      <button 
+      <button
         [disabled]="isDisabled()"
-        (click)="onButtonClick()" class="button is-link is-fullwidth">
+        (click)="onButtonClick()"
+        class="button is-link is-fullwidth"
+      >
         Generate!
       </button>
 
@@ -46,5 +52,46 @@
         <input class="input" [value]="password" />
       </div>
     </div>
+  </div>
+</div>
+
+<div class="container" style="margin-top: 50px">
+  <div class="columns is-centered">
+    <div class="column is-one-third">
+      <h3 class="title has-text-centered">About this app</h3>
+    </div>
+    <div class="column is-two-thirds">
+      <p>
+        This app is a simple demo of what can be achieved withAngular, a Single
+        Page Application framework. The coding has been completed by
+        <a href="https://stulast.co.uk" target="_blank">
+          Stu Last
+          <span class="icon"> <i class="fas fa-external-link-alt"></i> </span>
+        </a>
+        of
+        <a hef="https://spycedconcepts.uk" target="_blank"
+          >Spyced Concepts
+          <span class="icon">
+            <i class="fas fa-external-link-alt"></i>
+          </span> </a
+        >. You can view full code repository on
+        <a
+          href="https://github.com/StuLast/angular-demo-password-generator"
+          target="_blank"
+          >Github.com
+          <span class="icon"> <i class="fas fa-external-link-alt"></i> </span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-top: 50px">
+  <div class="columns is-centered">
+    <strong>Cookies and Privacy:</strong>
+    <p style="margin-left: 20px">
+      No cookies are set for this website and no personal information is
+      gathered.
+    </p>
   </div>
 </div>
