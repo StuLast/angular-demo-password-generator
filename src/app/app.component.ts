@@ -3,7 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: [
+    './app.component.css'
+  ]
 })
 export class AppComponent {
   
@@ -13,7 +15,7 @@ export class AppComponent {
   useSymbols = false;
   password = ''
   errMessage = '';
-
+ 
   private generatePassword = ():string  => {
     if(!this.useLetters && !this.useNumbers && !this.useSymbols) {
       this.errMessage = "Please select one or more from Letters, Numbers and Symbols";
@@ -84,5 +86,9 @@ export class AppComponent {
 
   onButtonClick = ():void =>  {
     this.password = this.generatePassword();
+  }
+
+  isDisabled = ():boolean => {
+   return !(this.passwordLength > 0 && (this.useLetters || this.useNumbers || this.useSymbols));
   }
 }
